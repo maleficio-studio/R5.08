@@ -1,5 +1,2 @@
-@import "tailwindcss";
 
-.important {
-  color: red;
-}
+@import "tailwindcss";
