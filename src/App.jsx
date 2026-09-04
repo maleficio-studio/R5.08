@@ -1,4 +1,5 @@
 import Card from "./components/Card";
+import data from "./data/data";
 
 function App() {
   return (
@@ -10,12 +11,9 @@ function App() {
         </ul>
         <div className = "cardContainer flex gap-10 flex-col justify-between">
 
-          <Card name="Dale Houston" title="Software Engineer" img="https://thispersondoesnotexist.com/random-person.jpeg"/>
-          <Card name="Madge Murphy" title="Teacher" img="https://thispersondoesnotexist.com/random-person.jpeg"/>
-          <Card name="Margaret Garner" title="Just a Nerd" img="https://thispersondoesnotexist.com/random-person.jpeg"/>
-          <Card name="Gertrude Roberts" title="Photographer" img="https://thispersondoesnotexist.com/random-person.jpeg"/>
-          <Card name="Jean Michel" title="Stone Eater" img="https://thispersondoesnotexist.com/random-person.jpeg"/>
-
+          {data.map((person) => (
+            <Card connected={person.connected} id={person.id} name={person.name} title={person.title} img={person.img} />
+          ))}
 
         </div>
       </div>
