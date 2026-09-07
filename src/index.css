@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
-.important {
-  color: red;
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --color-primary-light: hsl(236, 72%, 79%);
+  --color-primary-dark: hsl(237, 63%, 64%);
+
+  --color-neutral-very-light: hsl(240, 78%, 98%);
+  --color-neutral-light: hsl(234, 14%, 74%);
+  --color-neutral-grayish: hsl(233, 13%, 49%);
+  --color-neutral-dark: hsl(232, 13%, 33%);
+}
+
+:root {
+  --gradient-primary: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background-color: hsl(240, 78%, 98%);
+  color: hsl(232, 13%, 33%);
+  margin: 0;
+  min-height: 100vh;
 }
