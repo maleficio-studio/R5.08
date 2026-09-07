@@ -19,13 +19,13 @@ function App() {
         src={bgTop}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute top-0 right-0 z-0 select-none max-w-[200px] sm:max-w-[280px] lg:max-w-none"
+        className="pointer-events-none absolute top-0 right-0 z-0 max-w-[200px] select-none sm:max-w-[280px] lg:max-w-none"
       />
       <img
         src={bgBottom}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-0 z-0 select-none hidden lg:block"
+        className="pointer-events-none absolute bottom-0 left-0 z-0 hidden select-none lg:block"
       />
 
       {/* Main Content */}

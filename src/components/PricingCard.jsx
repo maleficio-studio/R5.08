@@ -6,8 +6,8 @@ function PricingCard({ plan, isMonthly, cardIndex }) {
     cardIndex === 0
       ? "lg:rounded-r-none"
       : cardIndex === 2
-      ? "lg:rounded-l-none"
-      : "lg:z-10";
+        ? "lg:rounded-l-none"
+        : "lg:z-10";
 
   return (
     <article
@@ -26,7 +26,7 @@ function PricingCard({ plan, isMonthly, cardIndex }) {
       </h2>
 
       <div className="my-6 flex items-center justify-center">
-        <span className="mr-1 text-3xl font-bold sm:text-4xl">&dollar;</span>
+        <span className="mr-1 text-3xl font-bold sm:text-4xl">$</span>
         <span className="text-6xl font-bold tracking-tight">
           {currentPrice}
         </span>
@@ -58,7 +58,7 @@ function PricingCard({ plan, isMonthly, cardIndex }) {
         className={`mt-8 w-full cursor-pointer rounded-md py-3.5 text-xs font-bold tracking-widest uppercase transition-all duration-200 ${
           isFeatured
             ? "border border-white bg-white text-[hsl(237,63%,64%)] hover:bg-transparent hover:text-white"
-            : "border border-transparent bg-gradient-to-r from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)] text-white hover:border-[hsl(237,63%,64%)] hover:bg-none hover:bg-white hover:text-[hsl(237,63%,64%)]"
+            : "border border-transparent bg-gradient-to-r from-[hsl(236,72%,79%)] to-[hsl(237,63%,64%)] text-white hover:border-[hsl(237,63%,64%)] hover:bg-white hover:bg-none hover:text-[hsl(237,63%,64%)]"
         }`}
       >
         Learn More
