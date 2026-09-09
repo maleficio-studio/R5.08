@@ -5,7 +5,9 @@ function PricingToggle({ isMonthly, onToggle }) {
         type="button"
         onClick={() => isMonthly && onToggle()}
         className={`cursor-pointer text-sm font-bold transition-colors duration-200 ${
-          !isMonthly ? "text-[hsl(232,13%,33%)]" : "text-[hsl(234,14%,74%)] hover:text-[hsl(233,13%,49%)]"
+          !isMonthly
+            ? "text-[hsl(232,13%,33%)]"
+            : "text-[hsl(234,14%,74%)] hover:text-[hsl(233,13%,49%)]"
         }`}
       >
         Annually
@@ -30,7 +32,9 @@ function PricingToggle({ isMonthly, onToggle }) {
         type="button"
         onClick={() => !isMonthly && onToggle()}
         className={`cursor-pointer text-sm font-bold transition-colors duration-200 ${
-          isMonthly ? "text-[hsl(232,13%,33%)]" : "text-[hsl(234,14%,74%)] hover:text-[hsl(233,13%,49%)]"
+          isMonthly
+            ? "text-[hsl(232,13%,33%)]"
+            : "text-[hsl(234,14%,74%)] hover:text-[hsl(233,13%,49%)]"
         }`}
       >
         Monthly
