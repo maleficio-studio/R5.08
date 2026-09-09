@@ -28,15 +28,16 @@ function App() {
         className="pointer-events-none absolute bottom-0 left-0 z-0 hidden select-none lg:block"
       />
 
+      {/* Toggle */}
+      <div className="mb-12">
+        <PricingToggle isMonthly={isMonthly} onToggle={handleToggle} />
+      </div>
+
       {/* Main Content */}
       <main className="relative z-10 flex w-full max-w-6xl flex-col items-center">
         <h1 className="mb-8 text-3xl font-bold text-[hsl(233,13%,49%)] sm:text-4xl">
           Our Pricing
         </h1>
-
-        <div className="mb-14 sm:mb-16">
-          <PricingToggle isMonthly={isMonthly} onToggle={handleToggle} />
-        </div>
 
         <div className="flex w-full flex-col items-center justify-center gap-8 lg:flex-row lg:gap-0">
           {pricingData.map((plan, index) => (
