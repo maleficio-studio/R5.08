@@ -2,37 +2,35 @@ const socialmediaData = [
   {
     id: 1,
     name: "Facebook",
-    image:
-      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_120x44dp.png",
+    image: "./assets/images/icon-facebook.svg",
     username: "@nathanf",
     followers: "1987",
-    followerpreview: "12 today",
+    today: "12",
   },
   {
     id: 2,
     name: "Twitter",
-    image:
-      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_120x44dp.png",
+    image: "./assets/images/icon-twitter.svg",
     username: "@nathanf",
     followers: "1044",
-    followerpreview: "99 today",
+    today: "99",
   },
   {
     id: 3,
     name: "Instagram",
-    image:
-      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_120x44dp.png",
+    image: "./assets/images/icon-instagram.svg",
     username: "@realnathanf",
     followers: "11k",
-    followerpreview: "1099 today",
+    today: "1099",
   },
   {
     id: 4,
     name: "Youtube",
-    image:
-      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_120x44dp.png",
+    image: "./assets/images/icon-youtube.svg",
     username: "Nathan F",
     followers: "8239",
-    followerpreview: "144 today",
+    today: "144",
   },
 ];
+
+export default socialmediaData;

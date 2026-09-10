@@ -1,0 +1,68 @@
+const socialmediaoverviewData = [
+  {
+    id: 1,
+    name: "Page Views",
+    platform: "Facebook",
+    image: "./assets/images/icon-facebook.svg",
+    data: "87",
+    percent: "+3%",
+  },
+  {
+    id: 2,
+    name: "Likes",
+    platform: "Facebook",
+    image: "./assets/images/icon-facebook.svg",
+    data: "52",
+    percent: "-2%",
+  },
+  {
+    id: 3,
+    name: "Likes",
+    platform: "Instagram",
+    image: "./assets/images/icon-instagram.svg",
+    data: "5462",
+    percent: "+2257%",
+  },
+  {
+    id: 4,
+    name: "Profile Views",
+    platform: "Instagram",
+    image: "./assets/images/icon-instagram.svg",
+    data: "52366",
+    percent: "+1375%",
+  },
+  {
+    id: 5,
+    name: "Retweets",
+    platform: "Twitter",
+    image: "./assets/images/icon-twitter.svg",
+    data: "117",
+    percent: "+303%",
+  },
+  {
+    id: 6,
+    name: "Likes",
+    platform: "Twitter",
+    image: "./assets/images/icon-twitter.svg",
+    data: "507",
+    percent: "+553%",
+  },
+  {
+    id: 7,
+    name: "Likes",
+    platform: "YouTube",
+    image: "./assets/images/icon-youtube.svg",
+    data: "107",
+    percent: "-19%",
+  },
+  {
+    id: 8,
+    name: "Total Views",
+    platform: "YouTube",
+    image: "./assets/images/icon-youtube.svg",
+    data: "1407",
+    percent: "-12%",
+  },
+];
+
+export default socialmediaoverviewData;
