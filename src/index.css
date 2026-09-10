@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
-.important {
-  color: red;
+@theme {
+  --color-lime-green: hsl(163, 72%, 41%);
+  --color-bright-red: hsl(356, 69%, 56%);
+
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-youtube: hsl(348, 97%, 39%);
+  --color-instagram-start: hsl(37, 97%, 70%);
+  --color-instagram-end: hsl(329, 70%, 58%);
+
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-top-bg: var(--theme-top-bg);
+  --color-theme-card: var(--theme-card);
+  --color-theme-text-muted: var(--theme-text-muted);
+  --color-theme-text: var(--theme-text);
+  --color-theme-toggle: var(--theme-toggle);
+
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+  :root {
+    /* Light Theme (Default) */
+    --theme-bg: hsl(0, 0%, 100%);
+    --theme-top-bg: hsl(225, 100%, 98%);
+    --theme-card: hsl(227, 47%, 96%);
+    --theme-text-muted: hsl(228, 12%, 44%);
+    --theme-text: hsl(230, 17%, 14%);
+    --theme-toggle: hsl(230, 22%, 74%);
+  }
+
+  .dark {
+    /* Dark Theme */
+    --theme-bg: hsl(230, 17%, 14%);
+    --theme-top-bg: hsl(232, 19%, 15%);
+    --theme-card: hsl(228, 28%, 20%);
+    --theme-text-muted: hsl(228, 34%, 66%);
+    --theme-text: hsl(0, 0%, 100%);
+  }
+
+  body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    font-family: var(--font-inter);
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
 }
