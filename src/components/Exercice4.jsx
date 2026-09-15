@@ -17,8 +17,13 @@ export default function Exercice4() {
       pathLength: 1,
       fill: "rgba(245, 158, 11, 1)", // full amber-500
       transition: {
-        default: { duration: 2, repeat: Infinity, repeatType: "reverse" },
-        fill: { duration: 2, ease: "easeIn", delay: 1, repeat: Infinity, repeatType: "reverse" },
+        default: { duration: 2, repeat: Infinity, repeatType: "loop" },
+        fill: {
+          duration: 1,
+          ease: "easeIn",
+          repeat: Infinity,
+          repeatType: "reverse",
+        },
       },
     },
   };

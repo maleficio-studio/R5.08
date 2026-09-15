@@ -9,25 +9,31 @@ import { motion } from "motion/react";
 
 export default function Exercice3() {
   const buttonVariants = {
-    rest: { scale: 1 },
+    rest: {
+      scale: 1,
+      backgroundColor: "#10b981", // emerald-500
+    },
     hover: {
       scale: 1.1,
       backgroundColor: "#059669", // emerald-600
-      transition: { type: "spring", damping: 10, stiffness: 600 },
+      transition: { type: "spring", damping: 10, stiffness: 400 },
     },
-    tap: { scale: 0.9 },
+    tap: {
+      scale: 0.95,
+      backgroundColor: "#047857", // emerald-700
+    },
   };
 
   return (
-    <div className="flex aspect-square items-center justify-center gap-10 rounded-lg bg-slate-800">
+    <div className="flex aspect-square items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-12 shadow-2xl shadow-emerald-900/20">
       <motion.button
         variants={buttonVariants}
         initial="rest"
         whileHover="hover"
         whileTap="tap"
-        className="w-1/2 cursor-pointer rounded-lg bg-emerald-600 py-4 text-2xl font-light tracking-wide text-gray-100"
+        className="cursor-pointer rounded-xl px-6 py-4 text-sm font-bold tracking-wider text-white uppercase outline-none sm:text-base"
       >
-        subscribe
+        Subscribe
       </motion.button>
     </div>
   );

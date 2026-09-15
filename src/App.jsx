@@ -15,6 +15,10 @@ function App() {
       <Exercice0 />
       <Exercice1 />
       <Exercice2 />
+      <Exercice3 />
+      <Exercice4 />
+      <Exercice5 />
+      <Exercice6 />
     </div>
   );
 }
