@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { getIcon } from "../data/ImgData";
 
 function OverviewCard({ name, platform, data, percent }) {
@@ -8,22 +9,41 @@ function OverviewCard({ name, platform, data, percent }) {
   const image = getIcon(platform);
 
   return (
-    <div className="bg-theme-card relative overflow-hidden rounded-md p-6 hover:cursor-pointer hover:brightness-95 dark:hover:brightness-110">
-      <div className="mb-6 flex items-center justify-between">
+    <motion.div
+      className="bg-theme-card relative rounded-md p-6 hover:cursor-pointer"
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <motion.div
+        className="mb-6 flex items-center justify-between"
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, delay: 0.15, ease: "easeOut" }}
+      >
         <span className="text-theme-text-muted text-sm font-bold">{name}</span>
         <img
           src={image}
           alt="platform icon"
           className="h-5 w-5 object-contain"
         />
-      </div>
+      </motion.div>
 
       <div className="flex items-end justify-between">
-        <h2 className="text-theme-text text-3xl leading-none font-bold">
+        <motion.h2
+          className="text-theme-text text-3xl leading-none font-bold"
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.25, ease: "easeOut" }}
+        >
           {data}
-        </h2>
-        <div
+        </motion.h2>
+        <motion.div
           className={`flex items-center justify-center gap-1 text-xs font-bold ${todayColor}`}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.35, ease: "easeOut" }}
         >
           <img
             src={todayIcon}
@@ -31,9 +51,9 @@ function OverviewCard({ name, platform, data, percent }) {
             className="object-contain"
           />
           <span>{displayPercent}</span>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -16,5 +16,8 @@ const platformIcons = {
 };
 
 export function getIcon(name) {
-  return platformIcons[name] ?? iconPlaceholder;
+  if (!name) return iconPlaceholder;
+  // Normalize: capitalize first letter so "facebook" matches "Facebook"
+  const key = name.charAt(0).toUpperCase() + name.slice(1);
+  return platformIcons[key] ?? iconPlaceholder;
 }
