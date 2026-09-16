@@ -1,11 +1,11 @@
-import iconUp from "../assets/images/icon-up.svg";
-import iconDown from "../assets/images/icon-down.svg";
+import { getIcon } from "../data/ImgData";
 
-function OverviewCard({ name, image, data, percent }) {
+function OverviewCard({ name, platform, data, percent }) {
   const isDown = percent.startsWith("-");
-  const todayIcon = isDown ? iconDown : iconUp;
+  const todayIcon = isDown ? getIcon("Down") : getIcon("Up");
   const todayColor = isDown ? "text-bright-red" : "text-lime-green";
   const displayPercent = percent.replace(/[+-]/, "");
+  const image = getIcon(platform);
 
   return (
     <div className="bg-theme-card relative overflow-hidden rounded-md p-6 hover:cursor-pointer hover:brightness-95 dark:hover:brightness-110">

@@ -1,6 +1,6 @@
 // App.jsx
-import MainCard from "./components/maincard";
-import OverviewCard from "./components/overviewcard";
+import MainCard from "./components/Maincard";
+import OverviewCard from "./components/Overviewcard";
 import {
   socialmediaData,
   socialmediaoverviewData,
@@ -21,7 +21,7 @@ function App() {
             <MainCard
               key={data.id}
               name={data.name}
-              image={data.image}
+              platform={data.platform}
               username={data.username}
               followers={data.followers}
               today={data.today}
@@ -39,7 +39,7 @@ function App() {
               <OverviewCard
                 key={data.id}
                 name={data.name}
-                image={data.image}
+                platform={data.platform}
                 data={data.data}
                 percent={data.percent}
               />

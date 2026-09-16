@@ -1,10 +1,12 @@
-import iconUp from "../assets/images/icon-up.svg";
-import iconDown from "../assets/images/icon-down.svg";
+import { getIcon } from "../data/ImgData";
 
-function MainCard({ name, image, username, followers, today }) {
-  const isDown = name === "Youtube";
-  const todayIcon = isDown ? iconDown : iconUp;
+function MainCard({ name, platform, username, followers, today }) {
+  const isDown = parseInt(today) < 0;
+  const todayIcon = isDown ? getIcon("Down") : getIcon("Up");
   const todayColor = isDown ? "text-bright-red" : "text-lime-green";
+
+  // Résolution de l'icône via le tableau associatif
+  const image = getIcon(platform);
 
   const topBarStyles = {
     Facebook: "bg-facebook",
@@ -41,7 +43,7 @@ function MainCard({ name, image, username, followers, today }) {
           alt={isDown ? "down" : "up"}
           className="object-contain"
         />
-        <span>{today} Today</span>
+        <span>{Math.abs(parseInt(today))} Today</span>
       </div>
     </div>
   );
