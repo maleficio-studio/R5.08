@@ -1,5 +1,120 @@
 @import "tailwindcss";
 
-.important {
-  color: red;
+/* ── Design tokens ────────────────────────────────── */
+:root {
+  --color-primary:   #6c63ff;
+  --color-secondary: #a855f7;
+  --color-bg-start:  #0f0c29;
+  --color-bg-mid:    #302b63;
+  --color-bg-end:    #24243e;
+  --color-card-from: rgba(255, 255, 255, 0.07);
+  --color-card-to:   rgba(255, 255, 255, 0.02);
+  --color-text:      #e2e8f0;
+  --color-subtext:   #a0aec0;
+}
+
+/* ── Base ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-start),
+    var(--color-bg-mid),
+    var(--color-bg-end)
+  );
+  background-attachment: fixed;
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* ── Custom utility classes ───────────────────────── */
+@layer utilities {
+  .btn-primary {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow:
+      0 4px 15px rgba(108, 99, 255, 0.45),
+      0 0 0 0 rgba(108, 99, 255, 0);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow:
+      0 8px 25px rgba(108, 99, 255, 0.6),
+      0 0 40px rgba(168, 85, 247, 0.25);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .quote-card {
+    max-width: 480px;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      135deg,
+      var(--color-card-from),
+      var(--color-card-to)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    color: var(--color-text);
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .app-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }

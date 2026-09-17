@@ -1,12 +1,10 @@
 // App.jsx
-import Profil from "./components/Profil";
+import PositiveQuote from "./components/PositiveQuote";
 
 function App() {
   return (
     <>
-      <Profil />
-      <Profil />
-      <Profil />
+      <PositiveQuote />
     </>
   );
 }
