@@ -18,7 +18,7 @@ function PositiveQuote() {
     <div className="app-wrapper">
       <h1 className="app-title">Citation du jour</h1>
       <QuoteButton onClick={handleClick} />
-      <QuoteDisplay quote={quote} animKey={key} />
+      <QuoteDisplay quote={quote} />
     </div>
   );
 }
