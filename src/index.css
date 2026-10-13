@@ -1,15 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-  color: #0f172a;
-  background: #f8fafc;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #0a0d3a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #5865f2;
+  color: #ffffff;
+}
+
+.font-display {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@keyframes mesh-float-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(60px, -40px) scale(1.15);
+  }
+}
+
+@keyframes mesh-float-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 50px) scale(1.2);
+  }
+}
+
+@keyframes mesh-float-3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, 40px) scale(0.95);
+  }
+}
+
+.animate-mesh-1 {
+  animation: mesh-float-1 14s ease-in-out infinite;
+}
+
+.animate-mesh-2 {
+  animation: mesh-float-2 18s ease-in-out infinite;
+}
+
+.animate-mesh-3 {
+  animation: mesh-float-3 16s ease-in-out infinite;
 }
 
 html,
@@ -17,8 +66,10 @@ body,
 #root {
   min-height: 100%;
   margin: 0;
+  background-color: #0a0d3a;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
